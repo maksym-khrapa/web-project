@@ -3,6 +3,28 @@ function circleCircumference(circle) {
   return 2 * Math.PI * circle.radius;
 }
 
+// https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
+function giveMeFive(obj) {
+  var arr = [];
+  for (var key in obj) {
+    if (key.length == 5) arr.push(key);
+    if (obj[key].length == 5) arr.push(obj[key]);
+  }
+  return arr;
+}
+
+// https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+function buildFun(n) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    res.push(function () {
+      console.log(i);
+      return i;
+    });
+  }
+  return res;
+}
+
 // https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
 class Shark extends Animal {
   constructor(name, age, status, legs, species) {
@@ -31,26 +53,4 @@ class Dog extends Animal {
   greetMaster() {
     return `Hello ${this.master}`;
   }
-}
-
-// https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
-function giveMeFive(obj) {
-  var arr = [];
-  for (var key in obj) {
-    if (key.length == 5) arr.push(key);
-    if (obj[key].length == 5) arr.push(obj[key]);
-  }
-  return arr;
-}
-
-// https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
-function buildFun(n) {
-  let res = [];
-  for (let i = 0; i < n; i++) {
-    res.push(function () {
-      console.log(i);
-      return i;
-    });
-  }
-  return res;
 }
